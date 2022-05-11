@@ -524,15 +524,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjorges1000testprojecttree40c274f3af71063decf4dc2376ec613d41fc05betargetblank40c274fa">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjorges1000testprojecttree932f3ae0d31aad1ea7bd502139eeddfbc7697be3targetblank932f3aea">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/jorges1000/test.project/tree/40c274f3af71063decf4dc2376ec613d41fc05be" target="_blank">40c274f</a>
+<a href="https://github.com/jorges1000/test.project/tree/932f3ae0d31aad1ea7bd502139eeddfbc7697be3" target="_blank">932f3ae</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomjorges1000testprojecttree40c274f3af71063decf4dc2376ec613d41fc05betargetblank40c274fa"
+id="strongRepositoryversionstrongahrefhttpsgithubcomjorges1000testprojecttree932f3ae0d31aad1ea7bd502139eeddfbc7697be3targetblank932f3aea"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -542,7 +542,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/jorges1000/test.project/tree/40c274f3af71063decf4dc2376ec613d41fc05be" target="_blank">40c274f</a>.
+<a href="https://github.com/jorges1000/test.project/tree/932f3ae0d31aad1ea7bd502139eeddfbc7697be3" target="_blank">932f3ae</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -604,6 +604,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/jorges1000/test.project/blob/932f3ae0d31aad1ea7bd502139eeddfbc7697be3/analysis/first-analysis.Rmd" target="_blank">932f3ae</a>
+</td>
+<td>
+jsepulveda
+</td>
+<td>
+2022-05-11
+</td>
+<td>
+"This is a test and only a test
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/jorges1000/test.project/03861f37128c7624e887a92788a17d18ee16fad1/docs/first-analysis.html" target="_blank">03861f3</a>
+</td>
+<td>
+jsepulveda
+</td>
+<td>
+2022-05-11
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -737,6 +771,17 @@ data files into a single database. Then you can query the database from
 R to obtain a given subset of the data needed for a particular analysis.
 Not only is this memory efficient, but you will benefit from the
 improved organization of your project’s data.</p>
+<p>First note that the R Markdown files created by wflow_start() and
+wflow_open() include the lines below in the YAML header. These
+purposefully disable inline code chunks to proactively prevent any
+potential incompatibilities with workflowr. To activate inline code
+chunks, you can either delete these two lines or replace console with
+inline.</p>
+<p>editor_options: chunk_output_type: console</p>
+<p>Adding the code chunk below to your R Markdown file will cause all
+the inline code chunks to be executed from the root of the project
+directory. This is consistent with the default workflowr setting.</p>
+<pre class="r"><code>knitr::opts_knit$set(root.dir = &quot;..&quot;)</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
