@@ -524,15 +524,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjorges1000testprojecttree7362f18e261c14fc7ac62eafa92e9019ad8ebb07targetblank7362f18a">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjorges1000testprojecttree1196d408b5f14d34f60d8eaefd92ff69210c4a9ctargetblank1196d40a">
 <span class="glyphicon glyphicon-ok text-success"
 aria-hidden="true"></span> <strong>Repository version:</strong>
-<a href="https://github.com/jorges1000/test.project/tree/7362f18e261c14fc7ac62eafa92e9019ad8ebb07" target="_blank">7362f18</a>
+<a href="https://github.com/jorges1000/test.project/tree/1196d408b5f14d34f60d8eaefd92ff69210c4a9c" target="_blank">1196d40</a>
 </a>
 </p>
 </div>
 <div
-id="strongRepositoryversionstrongahrefhttpsgithubcomjorges1000testprojecttree7362f18e261c14fc7ac62eafa92e9019ad8ebb07targetblank7362f18a"
+id="strongRepositoryversionstrongahrefhttpsgithubcomjorges1000testprojecttree1196d408b5f14d34f60d8eaefd92ff69210c4a9ctargetblank1196d40a"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -542,7 +542,7 @@ reproducibility.
 </p>
 <p>
 The results in this page were generated with repository version
-<a href="https://github.com/jorges1000/test.project/tree/7362f18e261c14fc7ac62eafa92e9019ad8ebb07" target="_blank">7362f18</a>.
+<a href="https://github.com/jorges1000/test.project/tree/1196d408b5f14d34f60d8eaefd92ff69210c4a9c" target="_blank">1196d40</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -607,6 +607,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/jorges1000/test.project/blob/1196d408b5f14d34f60d8eaefd92ff69210c4a9c/analysis/first-analysis.Rmd" target="_blank">1196d40</a>
+</td>
+<td>
+jsepulveda
+</td>
+<td>
+2022-05-11
+</td>
+<td>
+This last version ever
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/jorges1000/test.project/f3a212a8ea4b9c911043d54d1edf82d648111366/docs/first-analysis.html" target="_blank">f3a212a</a>
+</td>
+<td>
+jsepulveda
+</td>
+<td>
+2022-05-11
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 html
@@ -825,6 +859,10 @@ x.2
 </div>
 <div id="tips" class="section level2">
 <h2>Tips</h2>
+<p>Adding the code chunk below to your R Markdown file will cause all
+the inline code chunks to be executed from the root of the project
+directory. This is consistent with the default workflowr setting.</p>
+<pre class="r"><code>knitr::opts_knit$set(root.dir = &quot;..&quot;)</code></pre>
 <p>For example, an RNA sequencing project will produce FASTQ files that
 are large and won’t be modified. Instead of committing these files to
 the Git repository, they should instead be uploaded to GEO/SRA.</p>
@@ -849,10 +887,6 @@ potential incompatibilities with workflowr. To activate inline code
 chunks, you can either delete these two lines or replace console with
 inline.</p>
 <p>editor_options: chunk_output_type: console</p>
-<p>Adding the code chunk below to your R Markdown file will cause all
-the inline code chunks to be executed from the root of the project
-directory. This is consistent with the default workflowr setting.</p>
-<pre class="r"><code>knitr::opts_knit$set(root.dir = &quot;..&quot;)</code></pre>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
