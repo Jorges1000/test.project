@@ -13,3 +13,10 @@ editor_options:
 print('Hello!')
 ```
 
+
+## Tips
+For example, an RNA sequencing project will produce FASTQ files that are large and won’t be modified. Instead of committing these files to the Git repository, they should instead be uploaded to GEO/SRA.
+
+If your large data files are modified throughout the project, one option would be to record metadata about the data files, save it in a plain text file, and then commit the plain text file to the Git repository. For example, you could record the modification date, file size, MD5 checksum, number of rows, number of columns, column means, etc.
+
+Importing large amounts of data into an R session can drastically degrade R’s performance or even cause it to crash. If you have a large amount of data stored in one or more tabular files, but only need to access a subset at a time, you should consider converting your large data files into a single database. Then you can query the database from R to obtain a given subset of the data needed for a particular analysis. Not only is this memory efficient, but you will benefit from the improved organization of your project’s data.
