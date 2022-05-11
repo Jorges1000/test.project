@@ -37,6 +37,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/main/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
@@ -344,7 +346,13 @@ div.tocify {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/jorges1000/test.project">
+    <span class="fab fa-github"></span>
+     
+    Source code
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -516,13 +524,15 @@ project makes it easier to run your code on other machines.</p>
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrong39aff22">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomjorges1000testprojecttreece090ff3fecca1a37d11fd6f95e35576b5000515targetblankce090ffa">
 <span class="glyphicon glyphicon-ok text-success"
-aria-hidden="true"></span> <strong>Repository version:</strong> 39aff22
+aria-hidden="true"></span> <strong>Repository version:</strong>
+<a href="https://github.com/jorges1000/test.project/tree/ce090ff3fecca1a37d11fd6f95e35576b5000515" target="_blank">ce090ff</a>
 </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrong39aff22"
+<div
+id="strongRepositoryversionstrongahrefhttpsgithubcomjorges1000testprojecttreece090ff3fecca1a37d11fd6f95e35576b5000515targetblankce090ffa"
 class="panel-collapse collapse">
 <div class="panel-body">
 <p>
@@ -531,7 +541,8 @@ and connecting the code version to the results is critical for
 reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version 39aff22.
+The results in this page were generated with repository version
+<a href="https://github.com/jorges1000/test.project/tree/ce090ff3fecca1a37d11fd6f95e35576b5000515" target="_blank">ce090ff</a>.
 See the <em>Past versions</em> tab to see a history of the changes made
 to the R Markdown and HTML files.
 </p>
@@ -548,9 +559,6 @@ were generated:
 Ignored files:
     Ignored:    .Rproj.user/
     Ignored:    test.project/
-
-Untracked files:
-    Untracked:  README.html
 
 </code></pre>
 <p>
@@ -598,10 +606,27 @@ Message
 <tbody>
 <tr>
 <td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/jorges1000/test.project/blob/ce090ff3fecca1a37d11fd6f95e35576b5000515/analysis/first-analysis.Rmd" target="_blank">ce090ff</a>
+</td>
+<td>
+jsepulveda
+</td>
+<td>
+2022-05-11
+</td>
+<td>
+x3
+</td>
+</tr>
+<tr>
+<td>
 html
 </td>
 <td>
-288c359
+<a href="https://rawcdn.githack.com/jorges1000/test.project/3b93df53cd2945487a98718cfcb534ac837275e2/docs/first-analysis.html" target="_blank">3b93df5</a>
 </td>
 <td>
 jsepulveda
@@ -618,7 +643,24 @@ Build site.
 html
 </td>
 <td>
-ecf63c9
+<a href="https://rawcdn.githack.com/jorges1000/test.project/288c3595a4c85916536d84491ddaeb8b2f0d0a3b/docs/first-analysis.html" target="_blank">288c359</a>
+</td>
+<td>
+jsepulveda
+</td>
+<td>
+2022-05-11
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/jorges1000/test.project/ecf63c9d2071f25f73f6411ff84b9c52c0c64b48/docs/first-analysis.html" target="_blank">ecf63c9</a>
 </td>
 <td>
 jsepulveda
@@ -635,7 +677,7 @@ Build site.
 Rmd
 </td>
 <td>
-8edc1a5
+<a href="https://github.com/jorges1000/test.project/blob/8edc1a5687bec5396c8e29e6b890997c46147f20/analysis/first-analysis.Rmd" target="_blank">8edc1a5</a>
 </td>
 <td>
 jsepulveda
@@ -658,6 +700,26 @@ x.2
 <h2>Introduction</h2>
 <pre class="r"><code>print(&#39;Hello!&#39;)</code></pre>
 <pre><code>[1] &quot;Hello!&quot;</code></pre>
+</div>
+<div id="tips" class="section level2">
+<h2>Tips</h2>
+<p>For example, an RNA sequencing project will produce FASTQ files that
+are large and won’t be modified. Instead of committing these files to
+the Git repository, they should instead be uploaded to GEO/SRA.</p>
+<p>If your large data files are modified throughout the project, one
+option would be to record metadata about the data files, save it in a
+plain text file, and then commit the plain text file to the Git
+repository. For example, you could record the modification date, file
+size, MD5 checksum, number of rows, number of columns, column means,
+etc.</p>
+<p>Importing large amounts of data into an R session can drastically
+degrade R’s performance or even cause it to crash. If you have a large
+amount of data stored in one or more tabular files, but only need to
+access a subset at a time, you should consider converting your large
+data files into a single database. Then you can query the database from
+R to obtain a given subset of the data needed for a particular analysis.
+Not only is this memory efficient, but you will benefit from the
+improved organization of your project’s data.</p>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
