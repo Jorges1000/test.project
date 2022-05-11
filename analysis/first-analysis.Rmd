@@ -15,6 +15,12 @@ print('Hello!')
 
 
 ## Tips
+Adding the code chunk below to your R Markdown file will cause all the inline code chunks to be executed from the root of the project directory. This is consistent with the default workflowr setting.
+
+```{r setup}
+knitr::opts_knit$set(root.dir = "..")
+```
+
 For example, an RNA sequencing project will produce FASTQ files that are large and won’t be modified. Instead of committing these files to the Git repository, they should instead be uploaded to GEO/SRA.
 
 If your large data files are modified throughout the project, one option would be to record metadata about the data files, save it in a plain text file, and then commit the plain text file to the Git repository. For example, you could record the modification date, file size, MD5 checksum, number of rows, number of columns, column means, etc.
@@ -27,8 +33,4 @@ First note that the R Markdown files created by wflow_start() and wflow_open() i
 editor_options:
   chunk_output_type: console
   
-Adding the code chunk below to your R Markdown file will cause all the inline code chunks to be executed from the root of the project directory. This is consistent with the default workflowr setting.
 
-```{r setup}
-knitr::opts_knit$set(root.dir = "..")
-```
